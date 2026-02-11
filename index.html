@@ -29,9 +29,7 @@
       border:2px solid #d63384;
       font-size:16px;
       outline:none;
-      transition:border-color .2s;
     }
-    input[type="text"]:focus{border-color:#ff4d6d;}
     button{
       padding:10px 18px;
       border-radius:12px;
@@ -40,36 +38,34 @@
       color:white;
       font-weight:700;
       cursor:pointer;
-      transition:background .2s,transform .1s;
     }
-    button:hover{background:#d63384;}
-    button:active{transform:scale(0.95);}
     .hint{color:#444;font-size:14px;margin-bottom:16px}
-    .gift{font-size:60px;cursor:pointer;transition:transform .2s;}
-    .gift:hover{transform:scale(1.2);}
+    .gift{font-size:60px;cursor:pointer;}
     .result{margin-top:20px;}
-    .result img{max-width:100%;border-radius:12px;display:none;box-shadow:0 6px 20px rgba(0,0,0,0.2)}
+    .result img{max-width:100%;border-radius:12px;display:none;}
   </style>
 </head>
 <body>
   <div class="card">
-    <h1> ¿Cual es tu nombre :D? </h1>
+    <h1> ¿Cuál es tu nombre :D? </h1>
+
     <div class="row">
       <input id="nameInput" placeholder="Escribe tu nombre..." autofocus />
       <button id="checkBtn">Descubrir</button>
     </div>
-    <div class="hint">Si escribes tu nombre, podrás abrir un pedazo de regalo </div>
+
+    <div class="hint">Si escribes tu nombre, podrás abrir un pedazo de regalo</div>
 
     <div id="giftContainer" style="display:none;">
       <div class="gift" id="gift">🎁</div>
     </div>
 
     <div class="result">
-      <img id="imgMarta" src="dedo.jpg" height = "100%" width = "50%" alt="Sorpresa Marta" />
+      <img id="imgNatalia" src="dedo.jpg" width="50%" alt="Sorpresa Natalia" />
       <img id="imgOtro" src="pulgar.jpeg" alt="Sorpresa Otro" />
     </div>
 
-    <audio id="soundMarta" src="rock.mp3"></audio>
+    <audio id="soundNatalia" src="rock.mp3"></audio>
     <audio id="soundOtro" src="bien.mp3"></audio>
   </div>
 
@@ -78,44 +74,46 @@
     const btn = document.getElementById('checkBtn');
     const giftContainer = document.getElementById('giftContainer');
     const gift = document.getElementById('gift');
-    const imgM = document.getElementById('imgMarta');
+    const imgN = document.getElementById('imgNatalia');
     const imgO = document.getElementById('imgOtro');
-    const sndM = document.getElementById('soundMarta');
+    const sndN = document.getElementById('soundNatalia');
     const sndO = document.getElementById('soundOtro');
 
-    let isMarta = false;
+    let isNatalia = false;
 
     function resetAll(){
-      imgM.style.display = 'none';
+      imgN.style.display = 'none';
       imgO.style.display = 'none';
-      sndM.pause(); sndM.currentTime=0;
-      sndO.pause(); sndO.currentTime=0;
+      sndN.pause(); sndN.currentTime = 0;
+      sndO.pause(); sndO.currentTime = 0;
     }
 
-    btn.addEventListener('click',()=>{
+    btn.addEventListener('click', () => {
       const name = input.value.trim().toLowerCase();
       resetAll();
       giftContainer.style.display = 'block';
-      isMarta = (name === 'marta');
-      if(isMarta){
-        alert('Toma tu regalo');
-      } else {
-        alert('Toma un regalo pa ti guap@');
-      }
+
+      const nombresValidos = ['natalia', 'natt', 'natty'];
+      isNatalia = nombresValidos.includes(name);
+
+      alert(isNatalia ? 'Toma tu regalo 💖' : 'Toma un regalo pa ti guap@ 😌');
     });
 
-    gift.addEventListener('click',()=>{
+    gift.addEventListener('click', () => {
       resetAll();
-      if(isMarta){
-        imgM.style.display = 'block';
-        sndM.play().catch(()=>{});
+      if(isNatalia){
+        imgN.style.display = 'block';
+        sndN.play().catch(()=>{});
       } else {
         imgO.style.display = 'block';
         sndO.play().catch(()=>{});
       }
     });
 
-    input.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') btn.click(); });
+    input.addEventListener('keydown', e => {
+      if(e.key === 'Enter') btn.click();
+    });
+
     resetAll();
   </script>
 </body>
