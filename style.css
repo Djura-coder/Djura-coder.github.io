@@ -181,4 +181,55 @@ button:hover {
     height: 70px;
     opacity: 0.08;
   }
+/* 📱 AJUSTE GENERAL MÓVIL */
+@media (max-width: 768px) {
+
+  .contenido {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    width: 90%;
+    max-width: 300px;
+    font-size: 15px;
+  }
+
+  /* 📸 carrusel adaptado */
+  .slider img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .carrusel {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  /* 🌌 imágenes laterales menos invasivas */
+  .lado {
+    width: 60px;
+    height: 60px;
+    opacity: 0.06;
+  }
+
+  /* 💖 poema más compacto */
+  #poema-texto {
+    max-width: 90%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  /* 💭 frase */
+  #frase-texto {
+    font-size: 16px;
+  }
 }
