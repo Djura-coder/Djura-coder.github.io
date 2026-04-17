@@ -149,7 +149,7 @@ const fotosFav = [
   "fav8.jpeg",
   "fav9.jpeg",
   "fav10.jpeg",
-  "fav11.jpg",
+  "fav11.jpeg",
 ];
 
 let indexFav = 0;
