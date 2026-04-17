@@ -1,14 +1,14 @@
-// 💕 CONTENIDO
+// content
 const poema = `
-No puedo expresar con palabras lo que siento por ti,
-solo puedo decir que a mi tu presencia me hace feliz,
-y que quiero amarte asi, de manera no sutil,
-aunque en el amor sea un aprendiz .
+Amo tus pies porque anduvieron sobre la triste tierra hasta encontrarme,
+Amo tus ojos porque reflejan la claridad de tu alma y la bondad de tu corazón ,
+Amo tu ser porque el hecho de que exista su bondad me genera calma y pasión,
+Te amo, no solo por como me haces sentir, te amo por lo que implica amarme.
 `;
 
-const frase = "No estes triste mi amor, tu puede con esto y mas, eres una mujer fuerte y valiente, animo mi niña, recuerda que te amo :D ";
+const frase = "Fuerza Leona";
 
-const cancion = "https://youtu.be/Zn37zIBGv5M?si=FxlYgBAuTPPaNXIO";
+const cancion = "https://www.youtube.com/watch?v=ks_qOI0lzho&list=RDks_qOI0lzho&start_radio=1";
 
 
 // 📝 efecto máquina de escribir
@@ -32,7 +32,7 @@ function escribirTexto(elemento, texto, velocidad = 40) {
 }
 
 
-// 📥 contenido fijo
+// fijo
 document.addEventListener("DOMContentLoaded", () => {
   const fraseEl = document.getElementById("frase-texto");
   if (fraseEl) fraseEl.innerText = frase;
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// 💖 corazones flotando
+// corazones flotando
 setInterval(() => {
   const contenedor = document.querySelector(".corazones");
   if (!contenedor) return;
@@ -63,7 +63,7 @@ setInterval(() => {
 }, 500);
 
 
-// 🧠 RESET TOTAL (evita bugs de pantalla en blanco)
+//  Reset
 function ocultarTodo() {
   document.getElementById("bienvenida").classList.add("oculto");
   document.getElementById("menu").classList.add("oculto");
@@ -74,7 +74,7 @@ function ocultarTodo() {
 }
 
 
-// 💕 entrar
+// entrar
 function entrar() {
   ocultarTodo();
 
@@ -84,7 +84,7 @@ function entrar() {
 }
 
 
-// 📂 mostrar sección
+// mostrar sección
 function mostrarSeccion(id) {
   ocultarTodo();
 
@@ -98,7 +98,7 @@ function mostrarSeccion(id) {
 }
 
 
-// 🔙 volver menú
+// volver menú
 function volverMenu() {
   ocultarTodo();
 
@@ -108,7 +108,7 @@ function volverMenu() {
 }
 
 
-// 📸 CARRUSEL PRINCIPAL
+// carrusel
 const fotos = [
   "foto1.jpeg",
   "foto2.jpeg",
@@ -137,7 +137,7 @@ function cambiarFoto(dir) {
 }
 
 
-// 💕 CARRUSEL FAVORITOS
+// carrusel fav
 const fotosFav = [
   "fav1.jpeg",
   "fav2.jpeg",
@@ -149,6 +149,7 @@ const fotosFav = [
   "fav8.jpeg",
   "fav9.jpeg",
   "fav10.jpeg",
+  "fav11.jpeg",
 ];
 
 let indexFav = 0;
