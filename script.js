@@ -150,6 +150,14 @@ const fotosFav = [
   "fav9.jpeg",
   "fav10.jpeg",
   "fav11.jpeg",
+  "fav12.jpeg",
+  "fav13.jpeg",
+  "fav14.jpeg",
+  "fav15.jpeg",
+  "fav16.jpeg",
+  "fav17.jpeg",
+  "fav18.jpeg",
+  "fav19.jpeg",
 ];
 
 let indexFav = 0;
