@@ -6,7 +6,7 @@ alegria es para mi tu prescencia,
 y paz eterna es tu amor.
 `;
 
-const frase = "Fuerza Leona";
+const frase = "Voy por tu culito";
 
 const cancion = "https://www.youtube.com/watch?v=ks_qOI0lzho&list=RDks_qOI0lzho&start_radio=1";
 
