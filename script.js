@@ -9,8 +9,6 @@ su belleza inalcanzable,
 cual alto palacio vivaz ,
 su perfume es indescriptible,
 aunque lo use alguien mas.
-
-
 `;
 
 const frase = "Fuerza Leona";
