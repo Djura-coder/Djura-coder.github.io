@@ -4,11 +4,6 @@ Soy prisionero de tu esencia,
 que emanas con dulce fulgor ,
 alegria es para mi tu prescencia,
 y paz eterna es tu amor.
-
-su belleza inalcanzable,
-cual alto palacio vivaz ,
-su perfume es indescriptible,
-aunque lo use alguien mas.
 `;
 
 const frase = "Fuerza Leona";
