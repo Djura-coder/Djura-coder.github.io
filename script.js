@@ -1,9 +1,16 @@
 // content
 const poema = `
-Amo tus pies porque anduvieron sobre la triste tierra hasta encontrarme,
-Amo tus ojos porque reflejan la claridad de tu alma y la bondad de tu corazón ,
-Amo tu ser porque el hecho de que exista su bondad me genera calma y pasión,
-Te amo, no solo por como me haces sentir, te amo por lo que implica amarme.
+Soy prisionero de tu esencia,
+que emanas con dulce fulgor ,
+alegria es para mi tu prescencia,
+y paz eterna es tu amor.
+
+su belleza inalcanzable,
+cual alto palacio vivaz ,
+su perfume es indescriptible,
+aunque lo use alguien mas.
+
+
 `;
 
 const frase = "Fuerza Leona";
