@@ -13,7 +13,7 @@ aunque lo use alguien mas.
 
 const frase = "Voy por tu culito";
 
-const cancion = "https://www.youtube.com/watch?v=ks_qOI0lzho&list=RDks_qOI0lzho&start_radio=1";
+const cancion = "https://youtu.be/-vExohgAKGE?si=Xg4wpxV5S466XRsA";
 
 
 // 📝 efecto máquina de escribir
