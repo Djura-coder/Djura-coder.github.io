@@ -1,15 +1,41 @@
 // content
-const poema = `
-Soy prisionero de tu esencia,
-que emanas con dulce fulgor ,
-alegria es para mi tu prescencia,
-y paz eterna es tu amor.
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  push,
+  onValue
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-su belleza inalcanzable,
-cual alto palacio vivaz,
-su perfume es indescriptible,
-aunque lo use alguien mas.
-`;
+const firebaseConfig = {
+  apiKey: "AIzaSyBM-euCMRoRZbqIh5KTkHk8uS1dGu_F9XQ",
+  authDomain: "base-de-datos-poemas.firebaseapp.com",
+  databaseURL: "https://base-de-datos-poemas-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "base-de-datos-poemas",
+  storageBucket: "base-de-datos-poemas.firebasestorage.app",
+  messagingSenderId: "689758621758",
+  appId: "1:689758621758:web:ef8a9cf9aa952b92d7416f"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const poemsRef = ref(db, "poems");
+
+window.sendPoem = function () {
+  const author = document.getElementById("author").value || "Anónimo";
+  const text = document.getElementById("poemText").value;
+
+  if (!text.trim()) return;
+
+  push(poemsRef, {
+    author,
+    text,
+    date: new Date().toLocaleString(),
+    timestamp: Date.now()
+  });
+
+  document.getElementById("poemText").value = "";
+};
 
 const frase = "Voy por tu culito";
 
@@ -97,9 +123,6 @@ function mostrarSeccion(id) {
   seccion.classList.remove("oculto");
   seccion.classList.add("fade-in");
 
-  if (id === "poema") {
-    escribirTexto(document.getElementById("poema-texto"), poema);
-  }
 }
 
 
