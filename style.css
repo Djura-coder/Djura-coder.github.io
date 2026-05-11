@@ -115,16 +115,52 @@ button:hover {
   margin: 25px 0;
 }
 
-/* poema */
-#poema-texto {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  line-height: 1.6;
-  font-style: italic;
-  box-shadow: 0 0 20px rgba(200,150,255,0.2);
+.poems-container {
+  margin-top: 20px;
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.poem {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 0 10px rgba(200,150,255,0.15);
+}
+
+.poem strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #d8b4ff;
+}
+
+.poem-date {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 80%;
+  max-width: 500px;
+  height: 90px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+  font-family: inherit;
+}
+
+input {
+  width: 60%;
+  max-width: 300px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* frase */
