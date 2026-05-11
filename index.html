@@ -64,12 +64,26 @@
     <button onclick="volverMenu()">Volver</button>
   </div>
 
-  <!-- poema -->
-  <div id="poema" class="seccion oculto">
-    <h2>Poema del día</h2>
-    <p id="poema-texto"></p>
-    <button onclick="volverMenu()">Volver</button>
-  </div>
+<!-- poema -->
+<div id="poema" class="seccion oculto">
+
+  <h2>Poemas 💌</h2>
+
+  <!-- escribir poema -->
+  <input id="author" placeholder="Tu nombre">
+  <br><br>
+
+  <textarea id="poemText" placeholder="Escribe aquí tu poema..."></textarea>
+  <br><br>
+
+  <button onclick="sendPoem()">Enviar poema</button>
+
+  <!-- lista de poemas -->
+  <div id="poemsList" class="poems-container"></div>
+
+  <br>
+  <button onclick="volverMenu()">Volver</button>
+</div>
 
   <!-- frase -->
   <div id="frase" class="seccion oculto">
