@@ -64,7 +64,7 @@ onValue(poemsRef, (snapshot) => {
 
 // ================= CONTENIDO FIJO =================
 const frase = "Voy por tu culito";
-const cancion = "https://youtu.be/-vExohgAKGE?si=Xg4wpxV5S466XRsA";
+const cancion = "https://youtu.be/MLZj56EZzBc?si=XCki2AlJg6Q8XkNv";
 
 // ================= EFECTO ESCRITURA =================
 function escribirTexto(elemento, texto, velocidad = 40) {
